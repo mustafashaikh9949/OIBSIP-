@@ -19,7 +19,7 @@ public class Online_Exmition {
 	    int timeRemainning = 0;
 		 
 	 while (true) {
-	   System.out.println("Online Exmapination System");
+	   System.out.println("Online Exmamination System");
 	   System.out.println("1.Login");
 	   System.out.println("2. Update Profile and Password");
 	   System.out.println("3. Start Exam");
@@ -44,7 +44,7 @@ public class Online_Exmition {
 		    break ;
 		case 4:
 			System.out.println("Exting the program ");
-			System.exit(0);
+			System.exit(2);
 		    default:
 			  System.out.println("Invalid choice .Try agin");
 	 }
@@ -87,7 +87,7 @@ public class Online_Exmition {
   
   private static int startExam(Scanner scanner , Timer timer) {
 	  System.out.println("The Exam has started You have 30 min..");
-	  int timeRemainning = 01* 01;
+	  int timeRemainning = 01* 03;
 	  
 	  
 	 timer.scheduleAtFixedRate(new TimerTask() {

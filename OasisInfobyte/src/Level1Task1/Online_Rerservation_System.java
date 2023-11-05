@@ -86,6 +86,9 @@ public class Online_Rerservation_System {
 		String contactInfo = input.nextLine();
 		
 		System.out.print("Enter the train name");
+		String name1 = input.nextLine();
+		
+		System.out.print("Enter the train number");
 		int trainNumber= input.nextInt();
 		input.nextLine();
 		
@@ -95,14 +98,14 @@ public class Online_Rerservation_System {
 		System.out.print("Enter the destination");
 		String destination = input.nextLine();
 		
-		Reservation reservation = new Reservation(name, contactInfo, trainNumber, departurePlace, destination); 
+		Reservation reservation = new Reservation(name1, contactInfo, trainNumber, departurePlace, destination); 
 		reservations.put(nextPNR, reservation);
 		System.out.println("Reservation successful Your PNR Number");
 		nextPNR++;
 	}
   private static void cancelReservation(Scanner input) {
 		System.out.print("Enter youur PNR Number");
-		int pnr = input.nextInt();
+		int pnr= input.nextInt();
 		input.nextLine();
 			
 		if(reservations.containsKey(pnr)) {
@@ -127,6 +130,7 @@ public class Online_Rerservation_System {
   class Reservation{
 		private String name;
 		private String contactInfo;
+		private String trainname;
 		private int trainNumber;
 		private String departureplace;
 		private String destination;
@@ -135,13 +139,15 @@ public class Online_Rerservation_System {
 			
 			this.name = name;
 			this.contactInfo = contactInfo;
+			this.trainname = trainname ;
 			this.trainNumber = trainNumber;
 			this.departureplace = departureplace;
 			this.destination = destination;
 		}
   public String toString() {
-			return "Name: " + name + "\nContact Information: " + contactInfo
-		                + "\nTrain Number: " + trainNumber + "\nDeparture Place: " + departureplace
+			return "Name: " + name + "\nContact Information: " + contactInfo 
+					    + "\nTrain Name: " + trainname+ "\nTrain Number: " + trainNumber 
+					    +  "\nDeparture Place: " + departureplace
 		                + "\nDestination: " + destination;
 			}
 		}

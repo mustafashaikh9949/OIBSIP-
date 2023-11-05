@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ATM_INTERFACE {
 
 	    private static int balance = 2500; // Initial balance for demonstration purposes
-	    private static int userId = 112200;
+	    private static int userId = 112204;
 	    private static int userPin = 949949;
 
 	    public static void main(String[] args) {
